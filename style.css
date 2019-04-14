@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'BB';
+    src: url('Handwriting2-Regular.eot');
+    src: local('Handwriting-Regular'), 
+         local('Handwriting-Regular'), 
+         url('Handwriting2-Regular.ttf') format('truetype'); 
+}
+
+* {
+    margin: 3px;
+    padding: 3px;
+    background-color: #EBE5C3;
+    font-family:'BB';
+}
+
+a {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: red;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/*MOBILE version*/
+.contentPage{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25px 1fr;
+    }
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+    
+/*DESKTOP version*/    
+@media only screen and (min-width: 715px) { 
+    /* For the content pages */
+    .contentPage{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 25px 1fr;
+    grid-template-areas: 
+        ". . ."
+        ". content ."
+        ;
+    }
+    
+    .content{
+        grid-area: content;
+        }
+    
+    /*For Homescreen*/    
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            ". . . about . . ."
+            ". . . about_img . . ."
+            "research research_img . . . teaching_img teaching"
+            ". contact contact_img . outreach_img outreach ."
+            ; 
+    }
+
+    .about {
+        grid-area: about;
+    }
+    .about_img {
+        grid-area: about_img;
+    }
+    .research {
+        grid-area: research;
+    }
+    .research_img {
+        grid-area: research_img;
+    }
+    .teaching {
+        grid-area: teaching;
+    }
+    .teaching_img {
+        grid-area: teaching_img;
+    }
+    .contact {
+        grid-area: contact;
+    }
+    .contact_img {
+        grid-area: contact_img;
+    }
+    .outreach {
+        grid-area: outreach;
+    }
+    .outreach_img {
+        grid-area: outreach_img;
+    }
+}
+
